@@ -30,11 +30,11 @@ else
     VALIDATE MySQL $?
 fi
 
-# dnf list installed nginx
-# if [ $? -eq 0 ]; then
-#     echo "nginx is already installed ... SKIPPING"
-# else
-#     echo "Installing nginx"
-#     dnf install nginx -y
-#     VALIDATE nginx $?
-# fi
+dnf list installed nginx
+if [ $? -eq 0 ]; then
+    echo "nginx is already installed ... SKIPPING"
+else
+    echo "Installing nginx"
+    dnf install nginx -y
+    VALIDATE nginx $?
+fi
